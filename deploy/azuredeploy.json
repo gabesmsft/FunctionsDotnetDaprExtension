@@ -62,7 +62,7 @@
     "policySBTopic": "policy1",
     "daprAppId1": "[parameters('functionapp1')]",
     "DOCKER_REGISTRY_SERVER_URL": "[split(split(parameters('functionappCI1'),'/')[0], '|')[1]]",
-    "pubsub": "mypubsub1"
+    "pubsub": "messagebus"
   },
   "resources": [
     {
@@ -111,7 +111,7 @@
     {
       "apiVersion": "2023-05-01",
       "type": "Microsoft.App/managedEnvironments/daprComponents",
-      "name": "messagebus",
+      "name": "[concat(parameters('environmentName'), '/', variables('pubsub'))]",
       "dependsOn": [
         "[resourceId('Microsoft.ServiceBus/namespaces/topics/authorizationRules',parameters('serviceBusNamespaceNAme'),parameters('serviceBusTopicName'),variables('policySBTopic'))]"
       ],
