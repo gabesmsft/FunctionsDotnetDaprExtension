@@ -165,7 +165,7 @@
         "name": "[parameters('functionapp1')]",
         "managedEnvironmentId": "[resourceId('Microsoft.App/managedEnvironments/', parameters('environmentName'))]",
         "workloadProfileName": "[if(parameters('useConsumptionWorkloadProfile'), 'Consumption', json('null'))]",
-        "DaprConfig": {
+        "daprConfig": {
           "enabled": true,
           "appId": "[parameters('functionapp1')]",
           "appPort": 3001,
