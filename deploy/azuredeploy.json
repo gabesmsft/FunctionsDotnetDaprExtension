@@ -50,11 +50,9 @@
       "type": "bool",
       "defaultValue": false,
       "allowedValues": [
-        false
-      ],
-      "metadata": {
-        "description": "Placeholder until Function Apps can be deployed to workload-profile enabled Container App Environments."
-      }
+        false,
+        true
+      ]
     }
   },
   "variables": {
