@@ -10,7 +10,7 @@
       }
     },
     "location": {
-      "defaultValue": "northeurope",
+      "defaultValue": "canadacentral",
       "type": "String"
     },
     "environmentName": {
